@@ -1,35 +1,34 @@
-}
-# Fraud Detection System
+Financial Fraud Detection
 
-## Overview
-This project aims to develop a Machine Learning model to identify and detect fraudulent financial transactions.
+A machine learning system that detects fraudulent financial transactions in real time. Built to address the growing challenge of payment fraud by identifying suspicious patterns in transaction data.
 
-## Features
-- Accurately identifies and detects fraudulent financial transactions
-- Utilizes data preprocessing and feature engineering
-- Machine learning model is trained on financial transaction data
-- Model performance is measured using precision, recall, and F1-score metrics
+Features
 
-## Technologies Used
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
+	•	Binary classification of transactions as fraudulent or legitimate
+	•	Handles highly imbalanced datasets using SMOTE / class weighting
+	•	Feature engineering on transaction amount, frequency, location, and time patterns
+	•	Model evaluation with precision, recall, F1-score, and AUC-ROC
+	•	Threshold tuning to minimize false negatives in high-risk scenarios
 
-## Methodology
-1. Data Preprocessing and Cleaning
-2. Feature Selection and Scaling
-3. Training Classification Model
-4. Model Performance Evaluation
+Tech Stack
 
-## Results
-The model was able to obtain an accuracy rate of 92% in detecting and identifying fraudulent financial transactions.
+Python, scikit-learn, pandas, numpy, matplotlib, imbalanced-learn
+Model options: Random Forest, XGBoost, Logistic Regression
 
-## Future Improvements
-- Deploy the model as a web application
-- Real-time fraud detection integration
-- Deep learning model integration
+Setup
 
-## Author
-This project is developed by a B.Tech ICT student with interest in Machine Learning and Data Analytics
+	1.	Clone the repository
+	2.	Install dependencies: pip install -r requirements.txt
+	3.	Place your dataset in the /data directory
+	4.	Run preprocessing: python preprocess.py
+	5.	Train the model: python train.py
+	6.	Evaluate: python evaluate.py
+
+Dataset
+
+Designed to work with standard fraud detection datasets such as the PaySim synthetic dataset or the Kaggle Credit Card Fraud Detection dataset. Update the data path in config.py before running.
+
+
+Project Status
+
+Core pipeline complete. Potential extensions include real-time API deployment, explainability with SHAP values, and integration with a transaction monitoring dashboard.
